@@ -53,13 +53,13 @@ for book in books:
             file_name = f"images{image_id}.txt"
 
             copy_image_path = f"{training_path}/images/{image_name}"
-            copy_file_path = f"{training_path}/images/{image_name}"
+            copy_file_path = f"{training_path}/labels/{file_name}"
         elif image_id >= val_thresh:
             image_name = f"images_val{image_id}.jpg"
             file_name = f"images_val{image_id}.txt"
 
             copy_image_path = f"{validation_path}/images/{image_name}"
-            copy_file_path = f"{validation_path}/images/{image_name}"
+            copy_file_path = f"{validation_path}/labels/{file_name}"
             
             
         shutil.copyfile(page["image_paths"]["ja"], copy_image_path)
