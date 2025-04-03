@@ -70,8 +70,8 @@ for book in books:
             class_id = 0
             for frame in page["frame"]:                
                 file.write(f"{class_id} {frame['x']/width:.3f} {frame['y']/height:.3f} {frame['w']/width:.3f} {frame['h']/height:.3f}\n")
-                class_id += 1
-                
+                class_id = 1
+            
             for text in page["text"]:
                 file.write(f"{class_id} {text['x']/width:.3f} {text['y']/height:.3f} {text['w']/width:.3f} {text['h']/height:.3f}\n")
 
